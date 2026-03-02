@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Bonus Table Extractor",
   "version": "1.0",
-  "description": "Extrae los bonus y copia CSV",
+  "description": "Extract and copy CSV",
   "permissions": ["activeTab", "scripting"],
   "action": {
     "default_popup": "popup.html",

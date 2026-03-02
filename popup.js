@@ -3,12 +3,12 @@ document.getElementById("copy").addEventListener("click", async () => {
 
     chrome.tabs.sendMessage(tab.id, { action: "GET_CSV" }, (response) => {
         if (!response || !response.csv) {
-            alert("No se pudo obtener el CSV");
+            alert("Couldn't get the CSV");
             return;
         }
 
         navigator.clipboard.writeText(response.csv)
-            .then(() => alert("CSV copiado al portapapeles"))
-            .catch(err => alert("Error al copiar: " + err));
+            .then(() => alert("CSV copied to clipboard successfully"))
+            .catch(err => alert("Error: " + err));
     });
 });

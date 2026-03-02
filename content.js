@@ -14,7 +14,6 @@ function parseBonusBlocks() {
             if (!node) break;
             let text = node.textContent.trim();
         
-            // Convertir a número seguro
             let num = parseInt(text);
             if (isNaN(num)) num = 0;
         
@@ -41,7 +40,7 @@ function getSupportHeaders() {
         name = name.replace(/\s+/g, " ").trim();
 
         headers.push({
-            img: "",   // vacío porque ya no quieres imágenes
+            img: "",
             name: name
         });
     }
@@ -54,13 +53,6 @@ function getSupportHeaders() {
 
 function toCSV(rows, headers) {
     let csv = "";
-
-    // // Fila 0 → imágenes
-    // csv += "\t"; // primera celda vacía
-    // headers.forEach(h => {
-    //     csv += (h.img || "") + "\t";
-    // });
-    // csv += "\n";
 
     // Fila 1 → nombres
     csv += "\t";
